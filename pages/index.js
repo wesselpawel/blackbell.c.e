@@ -51,8 +51,8 @@ function Home() {
               </svg>
           </div>
           <div className={styles.leftBottom}>
-              <h1>Blackbell.</h1>
-              <h2>Art is my life.</h2>
+              <h1>Blackbell<span>.</span></h1>
+              <h2>Art is my life<span>.</span></h2>
               <div className={styles.relativeBox}>
                 <button className={styles.more}>Learn more</button>
               </div>
