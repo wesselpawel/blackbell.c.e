@@ -7,7 +7,6 @@ import ig from '../images/ig.png'
 import Link from 'next/link'
 import React, { useState } from 'react';
 
-
 const svgVariants = {
     hidden:{
       opacity: 1,
@@ -31,8 +30,9 @@ function Home() {
 
     return (
       <>
+
       <div className={styles.background}></div>
-      <div className={styles.content}>
+      <div className={styles.main}>
         <div className={styles.mainBox}>
           <div className={styles.leftTop}>
               <svg version="1.1"
@@ -66,11 +66,12 @@ function Home() {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
+                    color:'orange',
                     transition: {
                     duration: .2
                   }}}
                   >
-                  <p>Gallery</p>
+                  <p><a href="#gallery">Gallery</a></p>
                   </motion.div>
                 </li>
                 <li>
@@ -78,6 +79,7 @@ function Home() {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
+                    color:'orange',
                     transition: {
                     duration: .2
                   }}}>
@@ -89,6 +91,7 @@ function Home() {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
+                    color:'orange',
                     transition: {
                     duration: .2
                   }}}>
@@ -129,6 +132,7 @@ function Home() {
           </div>
         </div>
       </div>
+      
       </>
     )
   }

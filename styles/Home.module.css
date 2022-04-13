@@ -1,5 +1,5 @@
 .background {
-  background-image: url("../images/backgroundpc.png");
+  background-image: url("../images/bbbackground.png");
   position: absolute;
   -webkit-filter: brightness(16%);
           filter: brightness(16%);
@@ -18,7 +18,7 @@
   }
 }
 
-.content {
+.main {
   height: 100vh;
   width: 100%;
   display: -webkit-box;
@@ -33,7 +33,7 @@
   color: white;
 }
 
-.content .mainBox {
+.main .mainBox {
   height: 80vh;
   width: 75vw;
   position: relative;
@@ -41,43 +41,43 @@
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox {
+  .main .mainBox {
     width: 90vw;
   }
 }
 
-.content .mainBox .leftTop {
+.main .mainBox .leftTop {
   height: 60%;
   width: 50%;
   position: relative;
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .leftTop {
+  .main .mainBox .leftTop {
     height: 75%;
   }
 }
 
-.content .mainBox .leftTop .logo {
+.main .mainBox .leftTop .logo {
   position: absolute;
   bottom: 0px;
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .leftTop .logo {
+  .main .mainBox .leftTop .logo {
     width: 175px;
     bottom: 20px;
   }
 }
 
-.content .mainBox .leftTop .logo .triangle {
+.main .mainBox .leftTop .logo .triangle {
   fill: none;
   stroke: white;
   stroke-width: 30;
   stroke-miterlimit: 10;
 }
 
-.content .mainBox .rightTop {
+.main .mainBox .rightTop {
   position: absolute;
   right: 0;
   top: 0;
@@ -85,24 +85,24 @@
   height: 50%;
 }
 
-.content .mainBox .rightTop .topText {
+.main .mainBox .rightTop .topText {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
 }
 
-.content .mainBox .rightTop .topText h1 {
+.main .mainBox .rightTop .topText h1 {
   color: #b3b3b3;
 }
 
 @media (max-width: 767px) {
-  .content .mainBox .rightTop .topText h1 {
-    display: none;
+  .main .mainBox .rightTop .topText h1 {
+    font-size: 2.375rem;
   }
 }
 
-.content .mainBox .rightTop .topText ul {
+.main .mainBox .rightTop .topText ul {
   list-style-type: none;
   color: white;
   position: absolute;
@@ -112,30 +112,30 @@
 }
 
 @media (max-width: 767px) {
-  .content .mainBox .rightTop .topText ul {
-    top: 0;
+  .main .mainBox .rightTop .topText ul {
+    top: 45px;
     width: 150px;
   }
 }
 
-.content .mainBox .rightTop .topText ul li {
-  padding-top: 20px;
+.main .mainBox .rightTop .topText ul li {
+  padding-top: 30px;
   font-size: 18px;
   position: relative;
 }
 
 @media (max-width: 767px) {
-  .content .mainBox .rightTop .topText ul li {
+  .main .mainBox .rightTop .topText ul li {
     font-size: 22px;
   }
 }
 
-.content .mainBox .rightTop .topText ul li p {
+.main .mainBox .rightTop .topText ul li p {
   z-index: 2;
   cursor: pointer;
 }
 
-.content .mainBox .rightTop .topText ul li p:hover::after {
+.main .mainBox .rightTop .topText ul li p:hover::after {
   -webkit-transform: translate(-110px, 6px);
           transform: translate(-110px, 6px);
   -webkit-transition: .3s;
@@ -143,13 +143,13 @@
 }
 
 @media (max-width: 767px) {
-  .content .mainBox .rightTop .topText ul li p:hover::after {
+  .main .mainBox .rightTop .topText ul li p:hover::after {
     -webkit-transform: translate(-130px, 10px);
             transform: translate(-130px, 10px);
   }
 }
 
-.content .mainBox .rightTop .topText ul li p::after {
+.main .mainBox .rightTop .topText ul li p::after {
   content: '';
   position: absolute;
   -webkit-transform: translate(9px, 7px);
@@ -163,13 +163,13 @@
 }
 
 @media (max-width: 767px) {
-  .content .mainBox .rightTop .topText ul li p::after {
+  .main .mainBox .rightTop .topText ul li p::after {
     -webkit-transform: translate(9px, 10px);
             transform: translate(9px, 10px);
   }
 }
 
-.content .mainBox .leftBottom {
+.main .mainBox .leftBottom {
   height: 43%;
   width: 50%;
   position: absolute;
@@ -187,28 +187,28 @@
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .leftBottom {
+  .main .mainBox .leftBottom {
     width: 100%;
     height: 35%;
   }
 }
 
-.content .mainBox .leftBottom span {
+.main .mainBox .leftBottom span {
   color: orange;
 }
 
-.content .mainBox .leftBottom h1 {
+.main .mainBox .leftBottom h1 {
   font-size: 5rem;
   position: relative;
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .leftBottom h1 {
+  .main .mainBox .leftBottom h1 {
     font-size: 3.5rem;
   }
 }
 
-.content .mainBox .leftBottom h1::after {
+.main .mainBox .leftBottom h1::after {
   content: '';
   height: 2px;
   width: 442px;
@@ -219,22 +219,22 @@
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .leftBottom h1::after {
+  .main .mainBox .leftBottom h1::after {
     width: 320px;
     top: 70px;
   }
 }
 
-.content .mainBox .leftBottom h2 {
+.main .mainBox .leftBottom h2 {
   font-size: 2.375rem;
 }
 
-.content .mainBox .leftBottom .relativeBox {
+.main .mainBox .leftBottom .relativeBox {
   position: relative;
   height: 18%;
 }
 
-.content .mainBox .leftBottom .relativeBox .more {
+.main .mainBox .leftBottom .relativeBox .more {
   font-size: 1.725rem;
   margin-left: 7px;
   background-color: transparent;
@@ -244,11 +244,11 @@
   cursor: pointer;
 }
 
-.content .mainBox .leftBottom .relativeBox .more:hover {
+.main .mainBox .leftBottom .relativeBox .more:hover {
   color: orange;
 }
 
-.content .mainBox .leftBottom .relativeBox .more::after {
+.main .mainBox .leftBottom .relativeBox .more::after {
   content: '';
   height: 4px;
   border-radius: 3px;
@@ -261,7 +261,7 @@
   transition: .3s;
 }
 
-.content .mainBox .leftBottom .relativeBox .more:hover:after {
+.main .mainBox .leftBottom .relativeBox .more:hover:after {
   content: '';
   -webkit-transform: translate(0px, 0);
           transform: translate(0px, 0);
@@ -270,7 +270,7 @@
   transition: .3s;
 }
 
-.content .mainBox .rightBottom {
+.main .mainBox .rightBottom {
   position: absolute;
   right: 0;
   bottom: 10px;
@@ -288,12 +288,12 @@
 }
 
 @media (max-width: 1023px) {
-  .content .mainBox .rightBottom {
+  .main .mainBox .rightBottom {
     bottom: -15px;
   }
 }
 
-.content .mainBox .rightBottom .socialMedia {
+.main .mainBox .rightBottom .socialMedia {
   margin-left: -5px;
 }
 /*# sourceMappingURL=Home.module.css.map */

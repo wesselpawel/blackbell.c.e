@@ -1,11 +1,10 @@
-import Layout from '../components/Layout'
+import Gallery from '../components/Gallery'
 import '../styles/globals.css'
 import { motion } from "framer-motion"
 
-function myApp({ Component, pageProps, router }) {
+function myApp({ Component, pageProps, router, text }) {
   return (
     
-
     <motion.div
       key={router.route}
       initial={{ opacity: 0 }}
@@ -14,9 +13,9 @@ function myApp({ Component, pageProps, router }) {
       transition={{ duration: 0.75 }}
     >
       <Component {...pageProps} />
+      <Gallery text={text}/>
     </motion.div>
 
-  
   )
 }
 
