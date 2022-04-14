@@ -1,12 +1,13 @@
 import styled from "styled-components"
 
-
-export const GalleryItem = styled.div`
+export const GalleryPhoto = styled.div`
     background-color: white;
     width:250px;
     height:250px;
     margin:5px;
-
+    display:flex;
+    color:black;
+    justify-content: center;
 `
 export const GalleryBox = styled.div`
     width:100%;

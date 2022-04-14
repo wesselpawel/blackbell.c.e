@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css'
 import { motion } from 'framer-motion'
 import fb from '../images/fb.png'
 import ig from '../images/ig.png'
-import Link from 'next/link'
 import React, { useState } from 'react';
 
 const svgVariants = {
@@ -137,3 +136,4 @@ function Home() {
     )
   }
   export default Home
+

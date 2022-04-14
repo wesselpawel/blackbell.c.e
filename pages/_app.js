@@ -2,7 +2,7 @@ import Gallery from '../components/Gallery'
 import '../styles/globals.css'
 import { motion } from "framer-motion"
 
-function myApp({ Component, pageProps, router, text }) {
+function myApp({ Component, pageProps, router, posts }) {
   return (
     
     <motion.div
@@ -13,10 +13,11 @@ function myApp({ Component, pageProps, router, text }) {
       transition={{ duration: 0.75 }}
     >
       <Component {...pageProps} />
-      <Gallery text={text}/>
+      <Gallery posts={posts}/>
     </motion.div>
 
   )
 }
 
 export default myApp
+
