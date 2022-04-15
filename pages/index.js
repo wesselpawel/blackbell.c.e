@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import fb from '../images/fb.png'
 import ig from '../images/ig.png'
 import React, { useState } from 'react';
-
+import Gallery from '../components/Gallery'
 const svgVariants = {
     hidden:{
       opacity: 1,
@@ -22,14 +22,12 @@ const svgVariants = {
   
   }
   
-function Home() {
-
+function Home({posts}) {
     const [active, setActive] = useState({isOpen:false})
     const isOpen = active.isOpen
-
     return (
       <>
-
+      <Gallery posts={posts}/>
       <div className={styles.background}></div>
       <div className={styles.main}>
         <div className={styles.mainBox}>
@@ -137,3 +135,12 @@ function Home() {
   }
   export default Home
 
+  export async function getServerSideProps(){
+    const posts = await fetch("http://localhost:3000/api/posts")
+
+    return {
+        props: {
+            posts: await posts.json()
+        }
+    }
+  }

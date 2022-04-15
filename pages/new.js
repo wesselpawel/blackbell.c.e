@@ -17,7 +17,6 @@ const NewPost = () => {
         });
         const data = await response;
     }
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -49,8 +48,11 @@ const NewPost = () => {
                     <button type='submit'>Create</button>
                 </form>
             </div>
+            
         </div>
     )
 }
+
+
 
 export default NewPost;

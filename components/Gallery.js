@@ -1,27 +1,15 @@
 import React from 'react'
-import { GalleryItem, GalleryBox } from './styles/Gallery.styles'
-import Image from 'next/image'
-import sectionImg from '../images/section.png'
+import { GalleryBox } from './styles/Gallery.styles'
+import GalleryItem from './GalleryItem'
 
 export default function Gallery({ posts }) {
   return (
     <>
         <GalleryBox>
-          <div>
-          
-            
-          </div>
+        {posts.map((post) => (
+          <GalleryItem key={post.id} post={post}/>
+        ))}
         </GalleryBox>
     </>
   )
-}
-export const getStaticProps = async () => {
-  const res = await fetch (`http://localhost/rest/api/post/read.php`)
-  const posts = await res.json()
-
-  return {
-    props: {
-      posts
-    }
-  }
 }

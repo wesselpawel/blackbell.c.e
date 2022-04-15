@@ -10,10 +10,12 @@ export default async function (req: NextApiRequest, res: NextApiResponse){
     } = req.body;
 
     const result = await db.collection("posts").insertOne({
+
         title:title,
         description:description,
         image:image,
         createdAt: new Date(),
+        
     });
 
     res.status(201);
