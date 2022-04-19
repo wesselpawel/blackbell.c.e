@@ -26,12 +26,13 @@ export default function Gallery({ posts }) {
                 <Image src={post.image} alt="" width={550} height={550}/>
               </GalleryPhoto>
             ))}
-            <button onClick={getNext}>
-              Next image
-            </button>
             <button onClick={getPrev}>
               Previous image
             </button>
+            <button onClick={getNext}>
+              Next image
+            </button>
+            
         </GalleryWrapper>
   )
 }
