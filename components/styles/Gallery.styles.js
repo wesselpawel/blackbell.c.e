@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const GalleryWrapper = styled.div`
     width:100%;
@@ -8,16 +8,21 @@ export const GalleryWrapper = styled.div`
     display:flex;
     justify-content: center;
     position:relative;
+
+    button{
+        height:20px; 
+        margin-top:30px;
+    }
 `
 export const GalleryPhoto = styled.div`
+    ${ props => props.visibility === props.current && css` 
+      z-index:5 !important;
+    `}
+    ${ props => props.visibility != props.current && css` 
+      z-index:-5 !important;
+    `}
     position:absolute;
     top:50%;
-    margin:-275px auto;
-    & > :nth-child(odd){
-        z-index: -1;
-    }
-    & > :nth-child(n+1){
-        z-index: 1;
-    }
+    margin:-275px auto; 
 `
 
