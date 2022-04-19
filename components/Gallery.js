@@ -1,15 +1,22 @@
 import React from 'react'
-import { GalleryBox } from './styles/Gallery.styles'
-import GalleryItem from './GalleryItem'
-
+import { GalleryWrapper, GalleryPhoto } from './styles/Gallery.styles'
+import Image from 'next/image'
 export default function Gallery({ posts }) {
+
+  function GalleryItems(index){
+    const array = posts.map((post, index) => index + post._id )
+    console.log(array);
+  }
+  console.log(GalleryItems(2));
+  
+
   return (
-    <>
-        <GalleryBox>
-        {posts.map((post) => (
-          <GalleryItem key={post.id} post={post}/>
-        ))}
-        </GalleryBox>
-    </>
+        <GalleryWrapper>
+            {posts.map((post) => (
+              <GalleryPhoto key={post._id} post={post}>
+                <Image src={post.image} alt="" width={550} height={550} />
+              </GalleryPhoto>
+            ))}
+        </GalleryWrapper>
   )
 }

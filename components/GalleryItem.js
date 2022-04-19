@@ -1,12 +1,11 @@
 import React from 'react'
 import { GalleryPhoto } from './styles/Gallery.styles'
-
+import Image from 'next/image'
 export default function GalleryItem ({post}) {
   return (
       <>
         <GalleryPhoto>
-            <h3>{post.title} &rarr;</h3>
-            <p>{post.description}</p>
+            <Image src={post.image} alt="" layout='fill' />
         </GalleryPhoto>
         </>
     )

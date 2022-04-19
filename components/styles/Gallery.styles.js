@@ -1,28 +1,23 @@
 import styled from "styled-components"
 
-export const GalleryPhoto = styled.div`
-    background-color: white;
-    width:250px;
-    height:250px;
-    margin:5px;
-    display:flex;
-    color:black;
-    justify-content: center;
-`
-export const GalleryBox = styled.div`
+export const GalleryWrapper = styled.div`
     width:100%;
-    height:auto;
+    height:100vh;
     background-color:black;
     color:white;
     display:flex;
-    align-items: center;
-    padding:10vh 0;
-    & > div{
-        width:50%;
-        margin:0 auto;
-        display:flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
+    justify-content: center;
+    position:relative;
+`
+export const GalleryPhoto = styled.div`
+    position:absolute;
+    top:50%;
+    margin:-275px auto;
+    & > :nth-child(odd){
+        z-index: -1;
+    }
+    & > :nth-child(n+1){
+        z-index: 1;
     }
 `
+

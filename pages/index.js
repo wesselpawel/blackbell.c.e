@@ -27,7 +27,7 @@ function Home({posts}) {
     const isOpen = active.isOpen
     return (
       <>
-      <Gallery posts={posts}/>
+      
       <div className={styles.background}></div>
       <div className={styles.main}>
         <div className={styles.mainBox}>
@@ -63,12 +63,12 @@ function Home({posts}) {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
-                    color:'orange',
+                    color:'rgb(255, 166, 0)',
                     transition: {
                     duration: .2
                   }}}
                   >
-                  <p><a href="#gallery">Gallery</a></p>
+                  <p>Gallery</p>
                   </motion.div>
                 </li>
                 <li>
@@ -76,7 +76,7 @@ function Home({posts}) {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
-                    color:'orange',
+                    color:'rgb(255, 166, 0)',
                     transition: {
                     duration: .2
                   }}}>
@@ -88,7 +88,7 @@ function Home({posts}) {
                     position:'relative',
                     zIndex: 1,
                     scale: [1, 1.3, 1.1],
-                    color:'orange',
+                    color:'rgb(255, 166, 0)',
                     transition: {
                     duration: .2
                   }}}>
@@ -129,7 +129,7 @@ function Home({posts}) {
           </div>
         </div>
       </div>
-      
+      <Gallery posts={posts}/>
       </>
     )
   }
