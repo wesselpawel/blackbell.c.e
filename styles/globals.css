@@ -5,6 +5,7 @@ html, body, *{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+
 }
 a{
     text-decoration: none;

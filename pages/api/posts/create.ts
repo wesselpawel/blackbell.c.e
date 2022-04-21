@@ -1,6 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { connect } from "../../../utils/database"
-
+export const config = {
+    api: {
+        bodyParser: {
+            sizeLimit: '4mb' // Set desired value here
+        }
+    }
+}
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async function (req: NextApiRequest, res: NextApiResponse){
     try{
@@ -10,12 +16,10 @@ export default async function (req: NextApiRequest, res: NextApiResponse){
     } = req.body;
 
     const result = await db.collection("posts").insertOne({
-
         title:title,
         description:description,
         image:image,
         createdAt: new Date(),
-        
     });
 
     res.status(201);

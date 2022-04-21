@@ -1,38 +1,17 @@
-import React, { useState } from 'react'
-import { GalleryWrapper, GalleryPhoto } from './styles/Gallery.styles'
-import Image from 'next/image'
+import React from 'react'
+import { GalleryWrapper, Background } from './styles/Gallery.styles'
+import GalleryItem from './GalleryItem'
 
 export default function Gallery({ posts }) {
 
-
-  const [current, setCurrent] = useState({
-    onTop: 0,
-  })
-
-  const onTop = current.onTop
-
-  const getNext = () => {
-    setCurrent({...current, onTop: onTop+1})
-  }
-
-  const getPrev = () => {
-    setCurrent({...current, onTop: onTop-1})
-  }
-
   return (
+      <Background>
+        <a id="gallery" href=""></a>
         <GalleryWrapper>
-            {posts.map((post, index) => (
-              <GalleryPhoto key={index} visibility={index} current={onTop} post={post}>
-                <Image src={post.image} alt="" width={550} height={550}/>
-              </GalleryPhoto>
-            ))}
-            <button onClick={getPrev}>
-              Previous image
-            </button>
-            <button onClick={getNext}>
-              Next image
-            </button>
-            
+          {posts.map((post, index) => (
+              <GalleryItem key={index} post={post} />
+          ))}
         </GalleryWrapper>
+      </Background>
   )
 }

@@ -59,6 +59,7 @@ function Home({posts}) {
               <h1>Blackbell.c.e</h1>
               <ul>
                 <li>
+                  <a href="#gallery">
                   <motion.div key="fb" whileHover={{
                     position:'relative',
                     zIndex: 1,
@@ -70,6 +71,7 @@ function Home({posts}) {
                   >
                   <p>Gallery</p>
                   </motion.div>
+                  </a>
                 </li>
                 <li>
                   <motion.div key="fb" whileHover={{
@@ -129,15 +131,16 @@ function Home({posts}) {
           </div>
         </div>
       </div>
+      
       <Gallery posts={posts}/>
+      
       </>
     )
   }
   export default Home
 
-  export async function getServerSideProps(){
+  export async function getStaticProps(){
     const posts = await fetch("http://localhost:3000/api/posts")
-
     return {
         props: {
             posts: await posts.json()
