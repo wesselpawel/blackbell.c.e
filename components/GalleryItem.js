@@ -1,30 +1,25 @@
 import React, { useState } from 'react'
 import { GalleryPhoto, GalleryContent, GalleryZoom } from './styles/Gallery.styles'
-import Link from 'next/link'
 
 export default function GalleryItem ({post}) {
 
-    const [isClicked, setClicked] = useState({
-        isClicked:false,
-    })
-    const clicked = isClicked.isClicked
-    function handleClick(){
-        setClicked({...isClicked, isClicked:true})
-    }
-    function handleClose(){
-        setClicked({...isClicked, isClicked:false})
+    const [isClicked, setClicked] = useState(false)
+
+    function handleOpen(){
+        setClicked(!isClicked)
     }
 
   return (
         <GalleryPhoto>
-                <button onClick={handleClick}>
+                <button onClick={handleOpen}>
                     <GalleryContent src={post.image} alt=""/>
                 </button>
-                {clicked 
+                {isClicked
                 ? 
-                (<button onClick={handleClose}><GalleryZoom>
-                    <GalleryContent src={post.image} alt=""/>
-                </GalleryZoom></button>
+                (<button onClick={handleOpen}>
+                    <GalleryZoom>
+                        <GalleryContent src={post.image} alt=""/>
+                    </GalleryZoom></button>
                 ) : (null)}
         </GalleryPhoto>
     )

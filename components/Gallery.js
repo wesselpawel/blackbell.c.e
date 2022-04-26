@@ -6,7 +6,7 @@ export default function Gallery({ posts }) {
 
   return (
       <Background>
-        <a id="gallery" href=""></a>
+        <a id="gallery" href="#"></a>
         <GalleryWrapper>
           {posts.map((post, index) => (
               <GalleryItem key={index} post={post} />

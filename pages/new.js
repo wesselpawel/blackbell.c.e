@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 import FileBase from 'react-file-base64'
 
 const NewPost = () => {
@@ -7,7 +6,7 @@ const NewPost = () => {
     
     async function createPost(formData){
         console.log(formData);
-        const response = await fetch("/api/posts/create", {
+        const request = await fetch("/api/posts/create", {
             method: "POST",
             headers: {
                 "Content-type": "application/json",
@@ -15,7 +14,7 @@ const NewPost = () => {
             },
             body: JSON.stringify({ data: formData }),
         });
-        const data = await response;
+        const data = await request;
     }
 
     const handleSubmit = (e) => {

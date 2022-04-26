@@ -1,16 +1,14 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 export const GalleryWrapper = styled.div`
     color:white;
     height:150vh; 
-    max-width:1000px;
+    max-width:1000px;  
     display:flex;
     flex-wrap: wrap;
     margin:0 auto;
     background-color:black;
     padding:55px;
-    
-
 `
 export const GalleryZoom = styled.div`
     color:white;
@@ -50,7 +48,5 @@ export const GalleryContent = styled.img`
 export const Background = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
     padding:200px 0;
-    
-    
 `
 
